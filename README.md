@@ -13,8 +13,13 @@ Plotly figures or MatPlotLib figures are returned for user customization.
 
 # Install
 
-The openmc_depletion_plotter package can be installed from PyPi with the terminal command.
+The full openmc_depletion_plotter package can be installed from PyPi with the terminal command.
 
+```bash
+pip install openmc_depletion_plotter[gui]
+```
+
+Or without the Graphical User Interface
 ```bash
 pip install openmc_depletion_plotter
 ```
