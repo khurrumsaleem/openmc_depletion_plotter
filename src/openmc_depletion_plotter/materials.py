@@ -60,7 +60,7 @@ def plot_isotope_chart_of_atoms(self, show_all=True, title="Numbers of nuclides"
         y, x, c, l = entry
 
         color = cm.viridis(c / max(c_vals))[:3]
-        scaled_color = (color[0] * 255, color[1] * 255, color[2] * 255)
+        scaled_color = (color[0].item() * 255, color[1].item() * 255, color[2].item() * 255)
         text_color = f"rgb{scaled_color}"
 
         if l in stable_nuclides:
@@ -145,7 +145,7 @@ def plot_isotope_chart_of_activity(
         y, x, c, l = entry
         if c != 0.0:
             color = cm.viridis(c / max(c_vals))[:3]
-            scaled_color = (color[0] * 255, color[1] * 255, color[2] * 255)
+            scaled_color = (color[0].item() * 255, color[1].item() * 255, color[2].item() * 255)
             text_color = f"rgb{scaled_color}"
 
             if l in stable_nuclides:
