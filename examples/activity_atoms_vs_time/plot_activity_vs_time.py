@@ -9,7 +9,7 @@ results = openmc.deplete.Results.from_hdf5("depletion_results.h5")
 # plots the atoms activity in Bq/g as a function of time
 plot = results.plot_activity_vs_time(
     time_units="s",
-    units="Bq/kg",
+    units="Bq/g",
     plotting_backend="plotly",
 )
 plot.show()
