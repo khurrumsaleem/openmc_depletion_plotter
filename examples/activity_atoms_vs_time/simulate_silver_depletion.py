@@ -45,7 +45,7 @@ settings.source = my_source
 
 model.settings = settings
 
-# This chain file was made with the run python generate_tendl_chain.py from the openmc-dev/data repo
+# This chain file was made with the run python generate_endf71_chain.py from the openmc-dev/data repo
 # this tells openmc the decay paths between isotopes including probabilities of different routes and half lives
 chain_filename = "chain-nndc-b7.1.xml"
 
@@ -53,10 +53,10 @@ operator = openmc.deplete.CoupledOperator(
     model=model,
     chain_file=chain_filename,
     normalization_mode="source-rate",
-    dilute_initial=0,
     reduce_chain=True,
     reduce_chain_level=5,
 )
+
 # Ag110 half life is 24 seconds
 # Ag108 halflife is 145 seconds
 timesteps_and_source_rates = [
@@ -64,10 +64,8 @@ timesteps_and_source_rates = [
     (24, 1e20),
     (24, 1e20),
     (24, 1e20),
-    (
-        24,
-        1e20,
-    ),  # should saturate Ag110 here as it has been irradiated for over 5 halflives
+    (24, 1e20),
+    # should saturate Ag110 here as it has been irradiated for over 5 halflives
     (24, 1e20),
     (24, 1e20),
     (24, 1e20),

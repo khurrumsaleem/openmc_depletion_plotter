@@ -21,7 +21,6 @@ dependencies = [
     "pint",
     "plotly",
     "numpy",
-    "streamlit",
     "matplotlib",
     "kaleido",
 ]
@@ -35,6 +34,9 @@ write_to = "src/openmc_depletion_plotter/_version.py"
 [project.optional-dependencies]
 tests = [
     "pytest",
+]
+gui = [
+    "streamlit",
 ]
 
 [project.scripts]
