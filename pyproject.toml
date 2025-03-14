@@ -23,6 +23,7 @@ dependencies = [
     "numpy",
     "matplotlib",
     "kaleido",
+    "awkward",
 ]
 dynamic = ["version"]
 
