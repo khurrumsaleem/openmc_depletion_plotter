@@ -29,3 +29,5 @@ from .utils import add_scale_buttons
 from .materials import plot_isotope_chart_of_atoms, plot_isotope_chart_of_activity
 from .integrators import plot_pulse_schedule
 from .results import plot_activity_vs_time, plot_atoms_vs_time, plot_decay_heat_vs_time
+
+from .core import read_depletion_results
